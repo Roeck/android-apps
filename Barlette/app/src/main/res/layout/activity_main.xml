@@ -4,15 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/colorAccent"
+    tools:context="com.example.rons9n.barlette.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+            android:id="@+id/selectedBarTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/almendra_sc"
+            android:text="Jameson"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/addBarTxt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo" app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintVertical_bias="0.0"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="245dp"
+        android:layout_height="213dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo1" />
+
+    <Button
+        android:id="@+id/decideBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="329dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/holtwood_one_sc"
+        android:text="DECIDE!"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+            android:id="@+id/addBarTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="60dp"
+            android:ems="10"
+            android:fontFamily="@font/bungee"
+            android:hint="Add new bar..."
+            android:inputType="textPersonName"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/addBarBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo" app:layout_constraintHorizontal_bias="0.506"/>
+
+    <Button
+            android:id="@+id/addBarBtn"
+
+            android:text="ADD BAR"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:background="@color/colorPrimary"
+
+            android:layout_width="270dp"
+            android:layout_height="60dp"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:fontFamily="@font/bungee" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/decideBtn"/>
 
 </android.support.constraint.ConstraintLayout>
